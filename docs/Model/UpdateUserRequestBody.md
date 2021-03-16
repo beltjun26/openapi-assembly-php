@@ -1,0 +1,27 @@
+# # UpdateUserRequestBody
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**first_name** | **string** | First name of the user | [default to 'Neol1556506027']
+**last_name** | **string** | Last name of the user | [optional]
+**email** | **string** | Email of the user. Unique to platform. | [optional]
+**mobile** | **string** | International number format. Include ’+’ and no spaces. | [optional]
+**address_line1** | **string** | First line of the user address | [optional]
+**address_line2** | **string** | Second line of the user address | [optional]
+**state** | **string** | State section of the user address | [optional]
+**city** | **string** | City section of the user address | [optional]
+**zip** | **string** | Postcode | [optional]
+**country** | **string** | [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Officially_assigned_code_elements) country code (3 char) | [optional]
+**dob** | **string** | Date of Birth (DD/MM/YYYY). | [optional]
+**government_number** | **string** | Generic parameter to capture important user verification data. eg. SSN for US users, TFN for AU users. | [optional]
+**drivers_license_number** | **string** | Driving license number of the user | [optional]
+**drivers_license_state** | **string** | State section of the user&#39;s driving license | [optional]
+**ip_address** | **string** | IP address | [optional]
+**logo_url** | **string** | URL link to the logo | [optional]
+**color_1** | **string** | Color code number 1 | [optional]
+**color_2** | **string** | Color code number 2 | [optional]
+**custom_descriptor** | **string** | When custom_descriptors are enabled, this is the information to appear on bundle direct debit statements (which show the buyer&#39;s custom_descriptor) as well as international wire payout, direct credit and PayPal payout statements (which show the seller&#39;s custom_descriptor) | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
