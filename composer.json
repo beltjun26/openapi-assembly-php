@@ -1,5 +1,6 @@
 {
     "name": "GIT_USER_ID/GIT_REPO_ID",
+    "version": "1.0.0",
     "description": "Assembly (formely PromisePay) is a powerful payments engine custom-built for platforms and marketplaces.",
     "keywords": [
         "openapitools",
