@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**capturePayment()**](ItemActionsApi.md#capturePayment) | **PATCH** /items/{id}/capture_payment | Capture Payment
 [**makePayment()**](ItemActionsApi.md#makePayment) | **PATCH** /items/{id}/make_payment | Make Payment
 [**refund()**](ItemActionsApi.md#refund) | **PATCH** /items/{id}/refund | Refund
+[**releasePayment()**](ItemActionsApi.md#releasePayment) | **PATCH** /items/{id}/release_payment | Release Payment (Deprecated - Do Not Use)
 [**voidPayment()**](ItemActionsApi.md#voidPayment) | **PATCH** /items/{id}/void_payment | Void Payment
 
 
@@ -325,6 +326,73 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Marketplace / Platform item ID to be refunded | [default to &#39;7190770-1-2908&#39;]
  **refund_request_body** | [**\OpenAPI\Client\Model\RefundRequestBody**](../Model/RefundRequestBody.md)|  |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SingleItem**](../Model/SingleItem.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [oAuth2ClientCredentials](../../README.md#oAuth2ClientCredentials)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `releasePayment()`
+
+```php
+releasePayment($id, $release_payment_request_body): \OpenAPI\Client\Model\SingleItem
+```
+
+Release Payment (Deprecated - Do Not Use)
+
+Included for legacy purposes for existing customers that use Escrow payments which are no longer supported for new flows/customers. Release funds held in escrow from an **Item** with an **Escrow** or **Escrow Partial Release** payment type.  This will transition the **Item** state to `completed`.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oAuth2ClientCredentials
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\ItemActionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 7190770-1-2908; // string | Marketplace / Platform item ID
+$release_payment_request_body = new \OpenAPI\Client\Model\ReleasePaymentRequestBody(); // \OpenAPI\Client\Model\ReleasePaymentRequestBody
+
+try {
+    $result = $apiInstance->releasePayment($id, $release_payment_request_body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ItemActionsApi->releasePayment: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Marketplace / Platform item ID | [default to &#39;7190770-1-2908&#39;]
+ **release_payment_request_body** | [**\OpenAPI\Client\Model\ReleasePaymentRequestBody**](../Model/ReleasePaymentRequestBody.md)|  |
 
 ### Return type
 
