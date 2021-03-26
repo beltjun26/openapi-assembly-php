@@ -1,6 +1,6 @@
 {
     "name": "beltjun26/openapi-assembly-php",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "description": "Assembly (formely PromisePay) is a powerful payments engine custom-built for platforms and marketplaces.",
     "keywords": [
         "openapitools",
